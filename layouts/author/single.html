@@ -1,0 +1,8 @@
+{{ define "main" }}
+{{     range $l := $.Site.Data.author }}
+{{       if eq $l.url .url }}
+{{         partial "author.html" $l }}
+{{       end }}
+{{     end }}
+{{ end }}
+

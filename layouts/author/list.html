@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>Authors</h1>
+<ul>
+    {{     range $l := $.Site.Data.author }}
+    <li>{{         partial "author.html" $l }}</li>
+
+{{     end }}
+</ul>
+{{ end }}
