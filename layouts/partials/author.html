@@ -1,14 +1,9 @@
 {{/* -*- engine: go -*- */}}
-<div class='h-card'>
-    <p>
+<div class='post-author h-card'>
         <a class='u-url url fn' href='{{ .url }}'>
-            author page
+            ⍰ {{/* local author page icon, h-card photo? */}}
         </a>
-    </p>
-    <p>
-        <a class='u-url url fn u-uid' href='{{ .uid }}'>
+        <a class='u-url url fn u-uid' href='{{ .uid }}'>{{/* how to indicate thi is remote page? */}}
             <span class="p-name">{{ .name }}</span>
         </a>
-    </p>
 </div>
-
