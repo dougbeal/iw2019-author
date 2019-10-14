@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{     range $l := $.Site.Data.author }}
-{{       if eq $l.url .url }}
+{{       if eq $l.uuid .uuid }}
 {{         partial "author.html" $l }}
 {{       end }}
 {{     end }}
