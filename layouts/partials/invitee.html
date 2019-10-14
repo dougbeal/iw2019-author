@@ -1,6 +1,16 @@
 {{/* -*- engine: go -*- */}}
-<div class='h-card'>
-        <a class='u-url url fn u-uid' href='{{ .uuid }}'>
+{{/* https://indieweb.org/person-tag#How_to */}}
+<div class='u-category h-card'>
+        <a class='u-url url fn u-uid' href='{{ .url }}'>
             <span class="p-name">{{ .name }}</span>
         </a>
+        {{ with .microdotblog }}
+        <a class='u-url url' href='https://micro.blog/{{ . }}'>[mb]</a>
+        {{ end }}
+        {{ with .twitter }}
+        <a class='u-url url' href='https://twitter.com/{{ . }}'>[tw]</a>
+        {{ end }}
+        {{ with .mastodon }}
+        <a class='u-url url' href='{{ . }}'>[md]</a>
+        {{ end }}
 </div>
