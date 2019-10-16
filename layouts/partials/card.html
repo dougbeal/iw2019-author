@@ -1,0 +1,16 @@
+{{/* -*- engine: go -*- */}}
+{{ $name := "Unknown" }}
+{{ with .author.name }}
+{{   $name = . }}
+{{ else }}
+{{   $name = .url }}
+{{ end }}
+
+<div class='h-card'>
+    {{ with .author.photo }}
+    <img src="{{ . }}" />
+    {{ end }}
+    <a class='u-url url fn' href='{{ .url }}'>
+        <span class="p-name">{{ $name }}</span>   
+    </a>
+</div>
