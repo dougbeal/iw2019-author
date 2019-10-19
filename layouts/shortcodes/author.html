@@ -1,0 +1,7 @@
+{{ with $key := index .Params 0 }}
+{{   range $l := $.Site.Data.author }}
+{{     if eq $l.uuid $key }}
+{{       partial "person-tag.html" $l }}
+{{     end }}
+{{   end }}
+{{ end }}
