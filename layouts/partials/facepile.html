@@ -1,0 +1,14 @@
+{{/* -*- engine: go -*- */}}
+<div class="facepile">
+    {{ range $webmention := . }}
+    {{ $name := "?" }}
+    {{ with .author.name }}
+    {{   $name = . }}
+    {{ end }}    
+    {{ with .author.photo }}
+    <a href='{{ $webmention.url }}'><img class="facepile" src="{{ . }}" /></a>
+    {{ else }}
+    <a href='{{ $webmention.url }}'><span class="facepile">{{ $name }}</span></a>
+    {{ end }}
+    {{ end }}
+</div>

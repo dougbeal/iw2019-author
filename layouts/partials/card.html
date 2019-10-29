@@ -8,7 +8,7 @@
 
 <div class='h-card'>
     {{ with .author.photo }}
-    <img src="{{ . }}" />
+    <img class='card' src="{{ . }}" />
     {{ end }}
     <a class='u-url url fn' href='{{ .url }}'>
         <span class="p-name">{{ $name }}</span>   
